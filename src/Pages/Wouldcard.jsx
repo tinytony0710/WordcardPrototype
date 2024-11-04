@@ -24,8 +24,8 @@ const cardboxData = [
 
 function WouldCard() {
 
-    const [havePhoto, setHavePhote] = useState(false)
-    const [textCount, setTextCount] = useState(0)
+    // const [havePhoto, setHavePhote] = useState(false)
+    // const [textCount, setTextCount] = useState(0)
     const [inputStr, setInputStr] = useState("")
     // const [sprout, setSprout] = useState(false)
     // const [stolon, setStolon] = useState(false)
@@ -81,29 +81,29 @@ function WouldCard() {
 	// }
 
     // 如果 originalData 有變化就執行
-	useEffect(() => {
+	// useEffect(() => {
 
-        const asyncfunc = async () => {
+    //     const asyncfunc = async () => {
 
-            // You can await here
-            await sleep(1000)
-            setTextCount(preState => {console.log(preState); return preState+1})
-        }
+    //         // You can await here
+    //         await sleep(1000)
+    //         setTextCount(preState => {console.log(preState); return preState+1})
+    //     }
 
-		if(havePhoto) {
-            asyncfunc()
-		}
+	// 	if(havePhoto) {
+    //         asyncfunc()
+	// 	}
 
-	}, [havePhoto])
+	// }, [havePhoto])
 
     useEffect(() => {
 
-        const asyncfunc = async () => {
+        // const asyncfunc = async () => {
 
-            // You can await here
-            await sleep(1000)
-            setTextCount(preState => {console.log(preState); return preState+1})
-        }
+        //     // You can await here
+        //     await sleep(1000)
+        //     setTextCount(preState => {console.log(preState); return preState+1})
+        // }
 
 		if(vocabulary > vocabulary2) {
             setPage(vocabularypageEnd)
@@ -409,8 +409,8 @@ function WouldCard() {
             }
             {page==sentencepage &&
             <div className="w-full h-full bg-indigo-400 overflow-auto col-content-box-5 pt-6">
-                {vocabulary==sentence1&&<div className="text-2xl text-black font-bold">你好</div>}
-                {vocabulary==sentence2&&<div className="text-2xl text-black font-bold">世界</div>}
+                {sentence==sentence1&&<div className="text-2xl text-black font-bold">你好</div>}
+                {sentence==sentence2&&<div className="text-2xl text-black font-bold">世界</div>}
                 
                 <div className="my-6 w-full h-px col-content-box-2">
                         <div className="w-[90%] h-full bg-black"></div>
